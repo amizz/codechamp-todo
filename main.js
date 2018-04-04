@@ -17,12 +17,18 @@ if(password == "123") {
 }
 
 var countTodo = 0;
-function addTodo(e) {
+function addTodo() {
   var todoInput = document.getElementById("todo-input");
   var todoList = document.getElementById("todo-list");
-  todoList.innerHTML += '<li id="todo-'+countTodo+'" onclick="deleteTodo(\'todo-'+countTodo+'\')">'+todoInput.value+'</li>';
-  todoInput.value = "";
-  countTodo++;
+
+  if(todoInput.value.trim() !== "") {
+    todoList.innerHTML += '<li id="todo-'+countTodo+'" onclick="deleteTodo(\'todo-'+countTodo+'\')">'+todoInput.value+'</li>';
+    todoInput.value = "";
+    countTodo++;
+  } else {
+    alert("Please input some text!");
+    todoInput.value = "";
+  }
 }
 
 function deleteTodo(id) {
