@@ -20,8 +20,12 @@ var countTodo = 0;
 function addTodo(e) {
   var todoInput = document.getElementById("todo-input");
   var todoList = document.getElementById("todo-list");
-  
-  todoList.innerHTML += "<li>"+todoInput.value+"</li>";
+  todoList.innerHTML += '<li id="todo-'+countTodo+'" onclick="deleteTodo(\'todo-'+countTodo+'\')">'+todoInput.value+'</li>';
   todoInput.value = "";
   countTodo++;
+}
+
+function deleteTodo(id) {
+  var elem = document.getElementById(id);
+  return elem.parentNode.removeChild(elem);  
 }
