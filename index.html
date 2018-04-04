@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
 </head>
+
 <body>
   <div id="todo" class="wrapper">
-    <div class="header" s>
-      <h1>Hi!</h1>
-      <h2>Here is your todo list</h2>
-    </div>
-    <div class="content">
-      <input class="todo" id="todo-input" type="text" placeholder="What are you going todo?"/>
-      <div class="centerium"> 
-        <button class="add-btn" onclick="addTodo()">+</button>
+    <div class="todo-wrapper">
+      <div class="header">
+        <h1>Hi!</h1>
+        <h2>Here is your todo list</h2>
       </div>
-      <ul id="todo-list" class="todo">
-      </ul>
-    </div>
-    <div class="footer">
-      Copyright 2018 Amirul Zharfan
+      <div class="content">
+        <input class="todo" id="todo-input" type="text" placeholder="What are you going todo?" />
+        <div class="centerium">
+          <button class="add-btn" onclick="addTodo()">+</button>
+        </div>
+        <ul id="todo-list" class="todo">
+        </ul>
+      </div>
+      <div class="footer">
+        Copyright 2018 Amirul Zharfan
+      </div>
     </div>
   </div>
   <div id="unauthorized">
     <h1>Unauthorized access</h1>
   </div>
+  <script src="./main.js"></script>
 </body>
+
 </html>
