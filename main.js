@@ -33,5 +33,11 @@ function addTodo() {
 
 function deleteTodo(id) {
   var elem = document.getElementById(id);
-  return elem.parentNode.removeChild(elem);  
+
+  //Strikethrough
+  if(elem.style['text-decoration'] == 'line-through') {
+    return elem.parentNode.removeChild(elem);
+  } else {
+    elem.style['text-decoration'] = 'line-through';
+  }
 }
