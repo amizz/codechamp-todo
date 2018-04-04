@@ -16,10 +16,12 @@ if(password == "123") {
   unauthorized.style.display = "flex";
 }
 
+var countTodo = 0;
 function addTodo(e) {
   var todoInput = document.getElementById("todo-input");
   var todoList = document.getElementById("todo-list");
   
   todoList.innerHTML += "<li>"+todoInput.value+"</li>";
   todoInput.value = "";
+  countTodo++;
 }
